@@ -1,0 +1,111 @@
+.textimage {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #fafafa;
+    padding: 20px 24px;
+}
+
+.textimage img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+}
+
+.textimage-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.textimage h2,
+.textimage h3 {
+    font-size: 21px;
+    font-weight: normal;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.textimage p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.textimage .image-caption {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-color);
+    margin-top: 8px;
+}
+
+.textimage a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.textimage a:hover {
+    text-decoration: underline;
+}
+
+
+/* Desktop layout */
+
+@media (width >=900px) {
+    .textimage {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+        padding: 40px 32px;
+    }
+    .textimage>div {
+        flex: 1;
+    }
+    .textimage-content {
+        gap: 20px;
+        padding-top: 90px;
+    }
+    .textimage h2,
+    .textimage h3 {
+        font-size: 22px;
+        margin-bottom: 13px;
+    }
+    .textimage p {
+        margin-bottom: 16px;
+    }
+}
+
+
+/* Tablet adjustments */
+
+@media (width >=600px) and (width < 900px) {
+    .textimage {
+        padding: 30px;
+    }
+    .textimage h2,
+    .textimage h3 {
+        font-size: 20px;
+    }
+    .textimage-content {
+        gap: 18px;
+        padding-top: 40px;
+    }
+}
+
+
+/* Image positioning variants */
+
+.textimage.image-right {
+    flex-direction: column;
+}
+
+@media (width >=900px) {
+    .textimage.image-right {
+        flex-direction: row-reverse;
+    }
+}
